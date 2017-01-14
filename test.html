@@ -1,0 +1,612 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>概览页</title>
+    <meta content="no-cache" http-equiv="pragma" />
+    <link rel="stylesheet" type="text/css" href="http://piccache.cnki.net//KNS/css/gb_min/simple.min.css?v=00E263BABE23AAFD" />
+    <script type="text/javascript" src="http://piccache.cnki.net//KNS/script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="http://piccache.cnki.net//KNS/script/min/gb.BriefPage.min.js?v=D59787997F3B8FCE" ></script>
+    
+</head>
+<body leftmargin="0" onload="BriefOnload();"  topmargin="0" onkeydown="grabEvent(event);" >
+    <form name="ctl00" method="post" action="brief.aspx?S=1&amp;ConfigFile=SCOD.xml&amp;keyValue=%u865a%u62df%u73b0%u5b9e&amp;t=1476356009999&amp;pagename=ASP.brief_result_aspx&amp;dbCatalog=%u4e13%u5229%u6570%u636e%u603b%u5e93&amp;dbPrefix=SCOD&amp;research=off" id="ctl00">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyNzU5NTY0MTNkZJ+A0R2qjUZfGiRbIURqg3/ZkIzX" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E1016E75" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgKZ7d/0AwK+8KC5D+VOHwyxMJe9tHry/twfO9XcwU8N" />
+</div>
+        <input type="hidden" id="SqlValue" name="SqlValue" value="C663DAE25B9B084F17C4EEBFF7331EB7EB73E5A56489C58224B07576A9274DC352388FF208945FA7A6DB4373A9AE39D7457800A2E2576B37663F8BC9AC0D9C824AD8D0EABBEE4F79F279CCB804C1801E588ED38181EB3E976823F864E5B30344F04DB98C83A1B4E80972D5D790FF77E6185D80EE4AD083051BE1F1D90E7C510F6552325D9ECDBE9C9149BB2D7CA43A357B70A7190FAC57BF2B010D2B41BDBA139807F4FBCF85750A8FE065AFF5FFEA279970326E14C02DDF9CA46EBFDB374D5C7E035733168528D7F343C0544A1C3D9FC84720EF6486BA38C07A8597BAE2BE21595F8F89C29BEBB51D7051186364D3EBD2034CB51E048F6022138FC3B5F53480CD883BD9B949EBDB550364B75DB95050D466CC2D3F5388064D2F85AC1DADB940FEB31D18EED88DEDFE26A3620E5E900B102E5CE1FB8A8024D6EFC710C97138EB4CCA96BC4BCB92FEBCE1D346A810B6ED4DD2C8A3F14F18338AE105D0D1A89B66BF5280929DA7A2ADD1BB95CCE698C2ED7ADD10691106D5844858047544D9C8EC45C344D994A11CD748CA6E222BB12BA6B7215B46C99AF21B662C6D5E0635B7C8CD7636C6879105B443AF287ECB2AD966901247614CCC49B91ACB2EEDC1F342E3AA22516EB37958170D045325742BA6484C763E351AA4C82FBA985483C9A5FBB60587F0564D21308646BB95BA2896273E85320DCBB565AD850099FD37B0559523B80CB88AE65BF39346B6ACFF939E73EA" />
+    <input type="hidden" id="txtValue" value="虚拟现实" />
+    <input type="hidden" id="LoginState" value="0" />
+    <input type="hidden" id="resultcount" name="resultcount" value="884" />
+    <input type="hidden" id="krsUrl" name="krsUrl" value="http://search.cnki.net/KRS/" />
+    <script type="text/javascript">  
+        function ShowGroup(p1,p2,p3)
+        {
+            return parent.ShowGroup(p1,p2,p3);
+        } 
+    
+    
+   $(document).ready(qkInfoCall);
+    </script>   
+    
+    <script language="JavaScript">
+<!--
+	function OnChangePagenum(pagenum)
+	{
+		return false;
+	}
+//-->
+</script>
+
+<script language="JavaScript">
+<!--
+function updateCounter() {
+}
+function numMarked() {
+company =	"cnki";
+cookie = new String(getCookie("FileNameS",'2'));
+if ((cookie.substring(0,cookie.indexOf(":")) != company) || cookie.length <= 5) {
+return 0;
+}
+a=cookie.split(",");
+			return a.length;
+}
+function getErrorMsg(count) {
+count = count || '50';
+var msg = '';
+if (!window.localStorage || !window.sessionStorage) {
+    msg = '如要选择更多，请您升级浏览器到最新版本。';
+} else {
+    msg = '不能超过'+count+'个,若要重新选择,请按清除按钮,再进行选取操作';
+}
+return msg;
+}
+function ClickOpen(url) {
+if (numMarked() == 0){
+alert('请先选取文献');
+return;}
+windowOpener(url);
+}
+function checkAll(form,stype) {
+var limit = 500;
+if(!window.localStorage || !window.sessionStorage){ limit = 50;};
+e	= document.forms[0].elements;
+for (i=0;	i<e.length;	i++) {
+if (e[i].type	== "checkbox"	 &&	e[i].name == "FileNameS")	{
+if (numMarked()>= limit) {
+this.checked=false;
+alert(getErrorMsg(limit));
+return false;
+}	else {
+if (e[i].checked==false) {
+if(document.cookie.length + e[i].value.length > 4096 ){
+    alert(getErrorMsg(limit));
+    return false;}
+addToCookie(e[i].value);
+e[i].checked=true;
+}
+}
+}
+}
+updateCounter();
+return true;
+}
+function clearAllMarks(form) {
+e	= document.forms[0].elements;
+for (i=0;	i<e.length;	i++) {
+if (e[i].type	== "checkbox"	&&	e[i].name == "FileNameS" ) {
+removeFromCookie(e[i].value);
+e[i].checked=false;
+}
+}
+updateCounter();
+}
+		function getCookie(Name,stype) {
+if (window.localStorage || window.sessionStorage) {   if(stype=='2') return window.sessionStorage.getItem(Name);    return window.localStorage.getItem(Name);}var search = Name	+ "=";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search);
+if (offset !=	-1)	{
+offset +=	search.length;
+end =	document.cookie.indexOf(";", offset);
+if (end == -1)
+end =	document.cookie.length;
+return unescape(document.cookie.substring(offset,	end));
+}
+}
+}
+function setCookie(name, value,stype) {
+if (window.localStorage || window.sessionStorage){
+  if(stype == '2'){  window.sessionStorage.setItem(name, value );}
+  else{  localStorage.setItem(name, value );}
+    return true;
+}
+var cookieValue = name + "=" + escape(value)+";"+"path=/";
+if(cookieValue.length  > 4096 ){
+    return false;}
+document.cookie =	cookieValue ;
+return true;}
+function getTableNameFileNames(s){
+ if (!s || s.length <= 0) {  return ''; }
+ var tempArr = s.split('!');
+ if (tempArr.length == 4) {
+return tempArr[0] + '!' + tempArr[1];}
+return '';}
+function handlerRegexSpcileChar(input) {
+  if (input) {
+     return input.replace(/[\(|\)|\+|\.|\*]/g, function (m) { return '\\' + m;});
+  }
+  return input;
+}
+function addToCookie(v) {
+company =	"cnki";
+cookie= new String(getCookie("FileNameS",'2'));
+if ((cookie.length > 0) && ((cookie.substring(0,cookie.indexOf(':')) == company))){
+ var tableFileNames = getTableNameFileNames(v);
+ tableFileNames = handlerRegexSpcileChar(tableFileNames);
+ var re = new RegExp(tableFileNames + '[^,]*', 'ig');
+if (re.test(cookie)) return;
+if (cookie.length	- 1	== cookie.indexOf(':'))	{
+setCookie("FileNameS", cookie+v,'2');
+}	else {
+				   setCookie("FileNameS",	cookie+","+v,'2');
+			   }
+}	else {
+setCookie("FileNameS", company + ":" + v,'2');
+}
+}
+function removeFromCookie(v) {
+var company =	"cnki";
+var cookie = new String(getCookie("FileNameS",'2'));
+if (cookie.substring(0,cookie.indexOf(':')) == company) {
+cookie = cookie.substring(cookie.indexOf(':')+1,cookie.length);
+ var deleteV = function (input, value) {
+re = new RegExp("^"+handlerRegexSpcileChar(value)+"$");
+input=input.replace(re,	"");
+re = new RegExp("^"+handlerRegexSpcileChar(value)+",");
+input=input.replace(re,	"");
+re = new RegExp(","+handlerRegexSpcileChar(value)+"$");
+input=input.replace(re,	"");
+re = new RegExp(","+handlerRegexSpcileChar(value)+",");
+input=input.replace(re,	",");
+ return input;
+}
+var tableFileNames = getTableNameFileNames(v);
+ tableFileNames = handlerRegexSpcileChar(tableFileNames);
+if (tableFileNames && tableFileNames.length <= 0){ return; }
+var re = new RegExp(tableFileNames + '[^,]*', 'ig');
+var tempMaths = cookie.match(re);
+if (tempMaths && tempMaths.length > 0) {
+    for (var i = 0; i < tempMaths.length; i++){
+        cookie = deleteV(cookie, tempMaths[i]);
+    }
+}
+}	else { cookie =	""; }
+if (cookie!="")	{ setCookie("FileNameS", company + ":" + cookie,'2');}
+else { setCookie("FileNameS", company +	":",'2');}
+}
+function checkMark(c)	{
+var limit = 500;
+if(!window.localStorage || !window.sessionStorage){ limit = 50;};
+if (c.checked	== true) {
+if (numMarked()>=limit) {
+alert(getErrorMsg(limit));
+c.checked=false;
+}	else {
+if(document.cookie.length + c.value.length > 4096 ){
+    c.checked=false;
+    alert(getErrorMsg(limit));
+    return false;}
+addToCookie(c.value);
+}
+}else	{
+removeFromCookie(c.value);
+}
+updateCounter();
+}
+//-->
+</script>
+<script language=javascript >
+var newWindow	= null
+var newWindow2 = null
+function windowOpener(loadpos)
+{
+newWindow	= window.open(loadpos,"_blank","toolbar=yes,resizable=yes,scrollbars=yes,dependent,location=yes,status=yes,menubar=yes,width=550,height=450");
+newWindow.focus();
+}
+function windowOpener2(loadpos)
+{
+newWindow2 = window.open(loadpos,"","toolbar=yes,resizable=yes,scrollbars=yes,dependent,location=yes,status=yes,menubar=yes,width=550,height=450");
+}
+</script>
+<table cellspacing='0' cellpadding='0'  border='0' bgcolor=''  bgcolor='#F4F5F6' width='100%'><tr><td><table id='J_ORDER' border=0 cellspacing=0 cellpadding=0 	width=100%	align=left  class='divsearch1'><tr><td><table border=0 cellspacing=4	cellpadding=2 class='taxis'><tr><td align='left'><span class="groupsorttitle">排序:</span><span class='Btn5'><a class='cur' onclick='clearAllMarks(this.form);' href="/kns/brief/brief.aspx?S=1&ConfigFile=SCOD.xml&keyValue=%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E&t=1476356009999&pagename=ASP.brief_result_aspx&dbCatalog=%E4%B8%93%E5%88%A9%E6%95%B0%E6%8D%AE%E6%80%BB%E5%BA%93&dbPrefix=SCOD&research=off&sorttype=(FFD%2c'RANK')+desc&queryid=0" title='只在800万条记录以内有效'>主题排序<img src='../images/gb/icon-d.gif' /></a></span><span class='Btn5'><a   onclick='clearAllMarks(this.form);' href="/kns/brief/brief.aspx?S=1&ConfigFile=SCOD.xml&keyValue=%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E&t=1476356009999&pagename=ASP.brief_result_aspx&dbCatalog=%E4%B8%93%E5%88%A9%E6%95%B0%E6%8D%AE%E6%80%BB%E5%BA%93&dbPrefix=SCOD&research=off&sorttype=(%e5%85%ac%e5%bc%80%e6%97%a5%2c+'DATE')+desc&queryid=0">公开日</a></span><span class='Btn5'><a   onclick='clearAllMarks(this.form);' href="/kns/brief/brief.aspx?S=1&ConfigFile=SCOD.xml&keyValue=%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E&t=1476356009999&pagename=ASP.brief_result_aspx&dbCatalog=%E4%B8%93%E5%88%A9%E6%95%B0%E6%8D%AE%E6%80%BB%E5%BA%93&dbPrefix=SCOD&research=off&sorttype=(%e7%94%b3%e8%af%b7%e6%97%a5%2c+'DATE')+desc&queryid=0">申请日</a></span></td><td align="right" style='width:30%;'>
+<div  id='id_grid_display_num'  class='class_grid_display_num'>
+每页显示：<a href="/kns/brief/brief.aspx?S=1&ConfigFile=SCOD.xml&keyValue=%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E&t=1476356009999&pagename=ASP.brief_result_aspx&dbCatalog=%E4%B8%93%E5%88%A9%E6%95%B0%E6%8D%AE%E6%80%BB%E5%BA%93&dbPrefix=SCOD&research=off&queryid=0&skuakuid=0&turnpage=1&recordsperpage=10">10</a> <a href="/kns/brief/brief.aspx?S=1&ConfigFile=SCOD.xml&keyValue=%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E&t=1476356009999&pagename=ASP.brief_result_aspx&dbCatalog=%E4%B8%93%E5%88%A9%E6%95%B0%E6%8D%AE%E6%80%BB%E5%BA%93&dbPrefix=SCOD&research=off&queryid=0&skuakuid=0&turnpage=1&recordsperpage=20"><font class='numNow'>20</font></a> <a href="/kns/brief/brief.aspx?S=1&ConfigFile=SCOD.xml&keyValue=%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E&t=1476356009999&pagename=ASP.brief_result_aspx&dbCatalog=%E4%B8%93%E5%88%A9%E6%95%B0%E6%8D%AE%E6%80%BB%E5%BA%93&dbPrefix=SCOD&research=off&queryid=0&skuakuid=0&turnpage=1&recordsperpage=50">50</a></div></td></tr></table></td></tr><tr><td><table class='pageBar_top' border=0 cellspacing=0	cellpadding=0 	width=100%	align=left ><tr><td align=left ><div class='SavePoint'>( <span id='selectCount' name='selectCount'>0</span> )<span style='font-size：10px;'><a href='javascript:void(0);' onclick='ClearAll(false);'>清除</a></span> <a href='javescript:void(0);' onclick='if( zeroSelectTip()){saveAs(0);} return false;'> 导出 / 参考文献</a><a href='javescript:void(0);' onclick='if( zeroSelectTip()){saveAs(1);} return false;'>分析 / 阅读</a></div></td><td align=right><div class='pageBar_min'><div class='pagerTitleCell'><span id="lbPagerTitle" name="lbPagerTitle" class="pagerTitle"></span>&nbsp;找到&nbsp;884&nbsp;条结果&nbsp;</div><span class='countPageMark'>浏览1/45</span><span class='topTurnSpan'><a id="Page_next"  href="?curpage=2&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=SCOD&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>下一页</a></span></div></td></tr></table>
+
+
+</td></tr></table></td></tr><tr><td><table class="GridTableContent"   align=left bgColor=#969799  Border=0  CellPadding=0  CellSpacing=0  Width=100%>
+<tr class="GTContentTitle">
+<td    align=center STYLE=" ">
+<input type=checkbox name='selectCheckbox' id='selectCheckbox' onclick="if(this.checked){this.checked = checkAll('this.form');}else{clearAllMarks(this.form);}" ></td>
+<td   Width='36%' align=center STYLE=" ">
+专利名称</td>
+<td   Width='7%' align=center STYLE=" ">
+发明人</td>
+<td   Width='12%' align=center STYLE=" ">
+申请人</td>
+<td   Width='9%' align=center STYLE=" ">
+来源数据库</td>
+<td   Width='10%' align=center STYLE=" ">
+申请日</td>
+<td   Width='11%' align=center STYLE=" ">
+公开日</td>
+<td   Width='5%' align=center STYLE=" ">
+下载</td>
+<td   Width='5%' align=center STYLE=" ">
+分享</td>
+</tr>
+
+<TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105607737A!1!0"  onclick="checkMark(this)"  >1</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=1&dbcode=scpd&dbname=SCPD2016&filename=CN105607737A' target='_blank'>对<font class=Mark>虚拟现实</font>系统的物理道具的定位方法以及<font class=Mark>虚拟现实</font>系统</a>
+       </td>
+      <td>戴若犁;刘昊扬;托比亚斯·鲍曼</td>
+      <td>北京诺亦腾科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-12-18</td>
+      <td>2016-05-25</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105607737A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105607737A','');" onmouseout="SetDisplayValue('CN105607737A','none');"><em> 分享</em>  
+         <input id="CN105607737A" name="CN105607737A" type="hidden" value='对虚拟现实系统的物理道具的定位方法以及虚拟现实系统-戴若犁;刘昊扬;托比亚斯·鲍曼-2016-05-25|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105607737A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105528079A!2!0"  onclick="checkMark(this)"  >2</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=2&dbcode=scpd&dbname=SCPD2016&filename=CN105528079A' target='_blank'>对<font class=Mark>虚拟现实</font>系统的物理道具的定位方法以及<font class=Mark>虚拟现实</font>系统</a>
+       </td>
+      <td>戴若犁;刘昊扬;托比亚斯·鲍曼</td>
+      <td>北京诺亦腾科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-12-18</td>
+      <td>2016-04-27</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105528079A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105528079A','');" onmouseout="SetDisplayValue('CN105528079A','none');"><em> 分享</em>  
+         <input id="CN105528079A" name="CN105528079A" type="hidden" value='对虚拟现实系统的物理道具的定位方法以及虚拟现实系统-戴若犁;刘昊扬;托比亚斯·鲍曼-2016-04-27|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105528079A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105487670A!3!0"  onclick="checkMark(this)"  >3</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=3&dbcode=scpd&dbname=SCPD2016&filename=CN105487670A' target='_blank'>对<font class=Mark>虚拟现实</font>系统的物理道具的定位方法以及<font class=Mark>虚拟现实</font>系统</a>
+       </td>
+      <td>戴若犁;刘昊扬;托比亚斯·鲍曼</td>
+      <td>北京诺亦腾科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-12-18</td>
+      <td>2016-04-13</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105487670A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105487670A','');" onmouseout="SetDisplayValue('CN105487670A','none');"><em> 分享</em>  
+         <input id="CN105487670A" name="CN105487670A" type="hidden" value='对虚拟现实系统的物理道具的定位方法以及虚拟现实系统-戴若犁;刘昊扬;托比亚斯·鲍曼-2016-04-13|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105487670A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105549732A!4!0"  onclick="checkMark(this)"  >4</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=4&dbcode=scpd&dbname=SCPD2016&filename=CN105549732A' target='_blank'><font class=Mark>虚拟现实</font>设备的控制方法、装置及<font class=Mark>虚拟现实</font>设备</a>
+       </td>
+      <td>冯智勇;张鹏飞;夏勇峰</td>
+      <td>小米科技有限责任公司</td>
+      <td>中国专利</td>
+      <td>2015-12-03</td>
+      <td>2016-05-04</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105549732A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105549732A','');" onmouseout="SetDisplayValue('CN105549732A','none');"><em> 分享</em>  
+         <input id="CN105549732A" name="CN105549732A" type="hidden" value='虚拟现实设备的控制方法、装置及虚拟现实设备-冯智勇;张鹏飞;夏勇峰-2016-05-04|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105549732A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105759964A!5!0"  onclick="checkMark(this)"  >5</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=5&dbcode=scpd&dbname=SCPD2016&filename=CN105759964A' target='_blank'>用于<font class=Mark>虚拟现实</font>设备的声音输入方法、装置及<font class=Mark>虚拟现实</font>设备</a>
+       </td>
+      <td>梁志龙</td>
+      <td>广东小天才科技有限公司</td>
+      <td>中国专利</td>
+      <td>2016-02-16</td>
+      <td>2016-07-13</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105759964A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105759964A','');" onmouseout="SetDisplayValue('CN105759964A','none');"><em> 分享</em>  
+         <input id="CN105759964A" name="CN105759964A" type="hidden" value='用于虚拟现实设备的声音输入方法、装置及虚拟现实设备-梁志龙-2016-07-13|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105759964A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105589562A!6!0"  onclick="checkMark(this)"  >6</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=6&dbcode=scpd&dbname=SCPD2016&filename=CN105589562A' target='_blank'>一种<font class=Mark>虚拟现实</font>设备和<font class=Mark>虚拟现实</font>系统</a>
+       </td>
+      <td>张博</td>
+      <td>京东方科技集团股份有限公司</td>
+      <td>中国专利</td>
+      <td>2016-03-22</td>
+      <td>2016-05-18</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105589562A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105589562A','');" onmouseout="SetDisplayValue('CN105589562A','none');"><em> 分享</em>  
+         <input id="CN105589562A" name="CN105589562A" type="hidden" value='一种虚拟现实设备和虚拟现实系统-张博-2016-05-18|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105589562A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105653044A!7!0"  onclick="checkMark(this)"  >7</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=7&dbcode=scpd&dbname=SCPD2016&filename=CN105653044A' target='_blank'>一种用于<font class=Mark>虚拟现实</font>系统的动作捕捉手套及<font class=Mark>虚拟现实</font>系统</a>
+       </td>
+      <td>戴若犁;刘昊扬;张羽驰</td>
+      <td>北京诺亦腾科技有限公司</td>
+      <td>中国专利</td>
+      <td>2016-03-14</td>
+      <td>2016-06-08</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105653044A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105653044A','');" onmouseout="SetDisplayValue('CN105653044A','none');"><em> 分享</em>  
+         <input id="CN105653044A" name="CN105653044A" type="hidden" value='一种用于虚拟现实系统的动作捕捉手套及虚拟现实系统-戴若犁;刘昊扬;张羽驰-2016-06-08|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105653044A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105630175A!8!0"  onclick="checkMark(this)"  >8</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=8&dbcode=scpd&dbname=SCPD2016&filename=CN105630175A' target='_blank'>一种<font class=Mark>虚拟现实</font>设备及<font class=Mark>虚拟现实</font>图像生成方法</a>
+       </td>
+      <td>朱向军;杜玉强;梁志龙;钟宇文;陈泽伟;刘火根;李飞行</td>
+      <td>广东小天才科技有限公司</td>
+      <td>中国专利</td>
+      <td>2016-02-16</td>
+      <td>2016-06-01</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105630175A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105630175A','');" onmouseout="SetDisplayValue('CN105630175A','none');"><em> 分享</em>  
+         <input id="CN105630175A" name="CN105630175A" type="hidden" value='一种虚拟现实设备及虚拟现实图像生成方法-朱向军;杜玉强;梁志龙;钟宇文;陈泽伟;刘火根;李飞行-2016-06-01|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105630175A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105491835A!9!0"  onclick="checkMark(this)"  >9</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=9&dbcode=scpd&dbname=SCPD2016&filename=CN105491835A' target='_blank'>一种<font class=Mark>虚拟现实</font>设备的移动终端夹持机构及<font class=Mark>虚拟现实</font>设备</a>
+       </td>
+      <td>李刚;张丰学</td>
+      <td>深圳多哚新技术有限责任公司</td>
+      <td>中国专利</td>
+      <td>2016-01-12</td>
+      <td>2016-04-13</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105491835A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105491835A','');" onmouseout="SetDisplayValue('CN105491835A','none');"><em> 分享</em>  
+         <input id="CN105491835A" name="CN105491835A" type="hidden" value='一种虚拟现实设备的移动终端夹持机构及虚拟现实设备-李刚;张丰学-2016-04-13|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105491835A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105657408A!10!0"  onclick="checkMark(this)"  >10</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=10&dbcode=scpd&dbname=SCPD2016&filename=CN105657408A' target='_blank'><font class=Mark>虚拟现实</font>场景的实现方法和<font class=Mark>虚拟现实</font>装置</a>
+       </td>
+      <td>卢念</td>
+      <td>北京小鸟看看科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-12-31</td>
+      <td>2016-06-08</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105657408A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105657408A','');" onmouseout="SetDisplayValue('CN105657408A','none');"><em> 分享</em>  
+         <input id="CN105657408A" name="CN105657408A" type="hidden" value='虚拟现实场景的实现方法和虚拟现实装置-卢念-2016-06-08|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105657408A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN105138135A!11!0"  onclick="checkMark(this)"  >11</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=11&dbcode=scpd&dbname=SCPD2016&filename=CN105138135A' target='_blank'>头戴式<font class=Mark>虚拟现实</font>设备及<font class=Mark>虚拟现实</font>系统</a>
+       </td>
+      <td>董荣省;郭成;吴涛</td>
+      <td>北京国承万通信息科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-09-15</td>
+      <td>2015-12-09</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105138135A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105138135A','');" onmouseout="SetDisplayValue('CN105138135A','none');"><em> 分享</em>  
+         <input id="CN105138135A" name="CN105138135A" type="hidden" value='头戴式虚拟现实设备及虚拟现实系统-董荣省;郭成;吴涛-2015-12-09|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN105138135A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN205356858U!12!0"  onclick="checkMark(this)"  >12</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=12&dbcode=scpd&dbname=SCPD2016&filename=CN205356858U' target='_blank'>一种<font class=Mark>虚拟现实</font>设备的移动终端夹持机构及<font class=Mark>虚拟现实</font>设备</a>
+       </td>
+      <td>李刚;张丰学</td>
+      <td>深圳多哚新技术有限责任公司</td>
+      <td>中国专利</td>
+      <td>2016-01-12</td>
+      <td>2016-06-29</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN205356858U"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN205356858U','');" onmouseout="SetDisplayValue('CN205356858U','none');"><em> 分享</em>  
+         <input id="CN205356858U" name="CN205356858U" type="hidden" value='一种虚拟现实设备的移动终端夹持机构及虚拟现实设备-李刚;张丰学-2016-06-29|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN205356858U'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2015!CN104898843A!13!0"  onclick="checkMark(this)"  >13</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=13&dbcode=scpd&dbname=SCPD2015&filename=CN104898843A' target='_blank'>实现<font class=Mark>虚拟现实</font>的方法和头戴式<font class=Mark>虚拟现实</font>设备</a>
+       </td>
+      <td>王洁;党少军</td>
+      <td>深圳市虚拟现实科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-06-06</td>
+      <td>2015-09-09</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN104898843A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN104898843A','');" onmouseout="SetDisplayValue('CN104898843A','none');"><em> 分享</em>  
+         <input id="CN104898843A" name="CN104898843A" type="hidden" value='实现虚拟现实的方法和头戴式虚拟现实设备-王洁;党少军-2015-09-09|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2015&filename=CN104898843A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2015!CN104932106A!14!0"  onclick="checkMark(this)"  >14</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=14&dbcode=scpd&dbname=SCPD2015&filename=CN104932106A' target='_blank'><font class=Mark>虚拟现实</font>显示方法和<font class=Mark>虚拟现实</font>眼镜</a>
+       </td>
+      <td>王洁;党少军</td>
+      <td>深圳市虚拟现实科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-06-26</td>
+      <td>2015-09-23</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN104932106A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN104932106A','');" onmouseout="SetDisplayValue('CN104932106A','none');"><em> 分享</em>  
+         <input id="CN104932106A" name="CN104932106A" type="hidden" value='虚拟现实显示方法和虚拟现实眼镜-王洁;党少军-2015-09-23|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2015&filename=CN104932106A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2016!CN204948267U!15!0"  onclick="checkMark(this)"  >15</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=15&dbcode=scpd&dbname=SCPD2016&filename=CN204948267U' target='_blank'>一种<font class=Mark>虚拟现实</font>电路系统及<font class=Mark>虚拟现实</font>头盔</a>
+       </td>
+      <td>夏九</td>
+      <td>北京小鸟看看科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-09-23</td>
+      <td>2016-01-06</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN204948267U"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN204948267U','');" onmouseout="SetDisplayValue('CN204948267U','none');"><em> 分享</em>  
+         <input id="CN204948267U" name="CN204948267U" type="hidden" value='一种虚拟现实电路系统及虚拟现实头盔-夏九-2016-01-06|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2016&filename=CN204948267U'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2015!CN104618712A!16!0"  onclick="checkMark(this)"  >16</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=16&dbcode=scpd&dbname=SCPD2015&filename=CN104618712A' target='_blank'>一种头戴式<font class=Mark>虚拟现实</font>设备及包括该设备的<font class=Mark>虚拟现实</font>系统</a>
+       </td>
+      <td>张书宾;冯伟东;罗齐琦;刘文帅</td>
+      <td>北京维阿时代科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-02-13</td>
+      <td>2015-05-13</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN104618712A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN104618712A','');" onmouseout="SetDisplayValue('CN104618712A','none');"><em> 分享</em>  
+         <input id="CN104618712A" name="CN104618712A" type="hidden" value='一种头戴式虚拟现实设备及包括该设备的虚拟现实系统-张书宾;冯伟东;罗齐琦;刘文帅-2015-05-13|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2015&filename=CN104618712A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2015!CN104811687A!17!0"  onclick="checkMark(this)"  >17</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=17&dbcode=scpd&dbname=SCPD2015&filename=CN104811687A' target='_blank'>一种<font class=Mark>虚拟现实</font>头盔的电路系统和<font class=Mark>虚拟现实</font>头盔</a>
+       </td>
+      <td>马金波;赵文慧;范传国;王冲</td>
+      <td>小鸟科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-04-24</td>
+      <td>2015-07-29</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN104811687A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN104811687A','');" onmouseout="SetDisplayValue('CN104811687A','none');"><em> 分享</em>  
+         <input id="CN104811687A" name="CN104811687A" type="hidden" value='一种虚拟现实头盔的电路系统和虚拟现实头盔-马金波;赵文慧;范传国;王冲-2015-07-29|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2015&filename=CN104811687A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2015!CN204442580U!18!0"  onclick="checkMark(this)"  >18</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=18&dbcode=scpd&dbname=SCPD2015&filename=CN204442580U' target='_blank'>一种头戴式<font class=Mark>虚拟现实</font>设备及包括该设备的<font class=Mark>虚拟现实</font>系统</a>
+       </td>
+      <td>张书宾;冯伟东;罗齐琦;刘文帅</td>
+      <td>北京维阿时代科技有限公司</td>
+      <td>中国专利</td>
+      <td>2015-02-13</td>
+      <td>2015-07-01</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN204442580U"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN204442580U','');" onmouseout="SetDisplayValue('CN204442580U','none');"><em> 分享</em>  
+         <input id="CN204442580U" name="CN204442580U" type="hidden" value='一种头戴式虚拟现实设备及包括该设备的虚拟现实系统-张书宾;冯伟东;罗齐琦;刘文帅-2015-07-01|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2015&filename=CN204442580U'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#ffffff>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2015!CN105022478A!19!0"  onclick="checkMark(this)"  >19</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=19&dbcode=scpd&dbname=SCPD2015&filename=CN105022478A' target='_blank'>根据指纹设定<font class=Mark>虚拟现实</font>显示器的方法和<font class=Mark>虚拟现实</font>显示器</a>
+       </td>
+      <td>盛玉伟</td>
+      <td>盛玉伟</td>
+      <td>中国专利</td>
+      <td>2015-06-30</td>
+      <td>2015-11-04</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN105022478A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN105022478A','');" onmouseout="SetDisplayValue('CN105022478A','none');"><em> 分享</em>  
+         <input id="CN105022478A" name="CN105022478A" type="hidden" value='根据指纹设定虚拟现实显示器的方法和虚拟现实显示器-盛玉伟-2015-11-04|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2015&filename=CN105022478A'></input><script>GetShareWeibos();</script></div></td></TR><TR  bgcolor=#f6f7fb>
+<td style="white-space:nowrap;"><input type=checkbox name=FileNameS  value="SCPD2015!CN104965739A!20!0"  onclick="checkMark(this)"  >20</td><td>
+        <a class='fz14' href='/kns/detail/detail.aspx?QueryID=0&CurRec=20&dbcode=scpd&dbname=SCPD2015&filename=CN104965739A' target='_blank'><font class=Mark>虚拟现实</font>显示器显示参数的设定方法和<font class=Mark>虚拟现实</font>显示器</a>
+       </td>
+      <td>盛玉伟</td>
+      <td>盛玉伟</td>
+      <td>中国专利</td>
+      <td>2015-06-30</td>
+      <td>2015-10-07</td>   
+     
+        <td align="center">
+        
+        <a target="shoppingcart" href="../RedirectPage.aspx?domain=http%3a%2f%2fdbpub.cnki.net%2fgrid2008%2fdbpub%2fdownload.aspx%3fdbname%3dscpd%26filename%3dCN104965739A"><img title="下载" src="../images/gb/download.gif" border="0"></img></a>
+        
+        </td>
+         <td align="center"><div class="sharebox" onmouseover="SetDisplayValue('CN104965739A','');" onmouseout="SetDisplayValue('CN104965739A','none');"><em> 分享</em>  
+         <input id="CN104965739A" name="CN104965739A" type="hidden" value='虚拟现实显示器显示参数的设定方法和虚拟现实显示器-盛玉伟-2015-10-07|/kns/detail/detail.aspx?dbcode=scpd&dbname=SCPD2015&filename=CN104965739A'></input><script>GetShareWeibos();</script></div></td></TR></table>
+
+
+</td></tr><tr><td><table class='pageBar_bottom' border=0 cellspacing=0	cellpadding=0 	width=100%	align=left ><tr><td align=left  colspan=9><div class='TitleLeftCell'><div class='pagerTitleCell'><span id="lbPagerTitle" name="lbPagerTitle" class="pagerTitle"></span>&nbsp;找到&nbsp;884&nbsp;条结果&nbsp;</div><font class='Mark'>1</font><a href="?curpage=2&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=SCOD&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>2</a><a href="?curpage=3&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=SCOD&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>3</a><a href="?curpage=4&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=SCOD&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>4</a><a href="?curpage=5&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=SCOD&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>5</a><a href="?curpage=6&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=SCOD&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>6</a><a href="?curpage=7&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=SCOD&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>7</a><a href="?curpage=8&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=SCOD&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>8</a><a href="?curpage=9&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=SCOD&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>9</a><a  href="?curpage=2&RecordsPerPage=20&QueryID=0&ID=&turnpage=1&tpagemode=L&dbPrefix=SCOD&Fields=&DisplayMode=listmode&PageName=ASP.brief_result_aspx#J_ORDER"	>下一页</a></div></div></td></tr></table>
+
+
+</td></tr></table>
+       
+    <input name="tpagemode" type="hidden" id="tpagemode" value="L" />
+    </form>
+
+    <script type="text/javascript">
+    try{}catch(e){}
+    ChangeDownloadImg();
+    briefTableListJSEvent();
+    BindOnlick_ShowWait();
+    BindTurnPage_TitleTip();
+    RevertUserSelect();
+    </script>   
+    <script src="http://search.cnki.net/KRS//Scripts/Recommend.js" type="text/javascript"></script>  
+</body>
+    <style type="text/css">
+        .flyingAdd
+        {
+            left: -100px;
+            top: 0px;
+            position: absolute;
+            width: 50px;
+            text-align: center;
+            height: 50px;
+            font-size: 50px;
+            color: #999;
+            z-index: 50000;
+        }
+    </style>
+    <div style="left: -1000px; top: -100px; opacity: 1; font-size: 50px;" class="flyingAdd">
+        <img src="http://piccache.cnki.net//KNS/images/gb/checkboxbook.png" alt="" /></div>
+</html>
